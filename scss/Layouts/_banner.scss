@@ -1,0 +1,34 @@
+.banner{
+    height: 100vh;
+    background-image: url(../img/banner.jpeg);
+    @extend %background-img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner__content{
+        text-align: center;
+        text-transform: uppercase;
+        h1{
+            @include textStyle($fs-7,$fw-1,$color-white-0);
+            letter-spacing: $ls-3;
+            line-height: normal;
+        }
+        h2{
+            @include textStyle2($fs-2, $fw-2);
+            letter-spacing: $ls-3 + 1;
+            color: $color-white-0;
+        }
+    }
+
+    @include responsive("medium"){
+        .banner__content{
+            h1{
+                @include textStyle($fs-6,$fw-1,$color-white-0)
+            }
+            h2{
+                @include textStyle2($fs-2 - 2, $fw-2);
+            }
+        }
+        
+    }
+}

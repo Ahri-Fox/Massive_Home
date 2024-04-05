@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: $fs-0;
+    font-weight: $fw-1;
+    color: $color-black-0;
+    line-height: $line-height-0;
+}
+
+.section{
+    padding: $pd-sec 0;
+}
+
+p{
+    color: $color-gray-1;
+    font-weight: $fw-0;
+}
+
+.aaa{
+    padding-left: $pd-4;
+    padding-right: $pd-4;
+}
+
+@media screen and (min-width: 769px) {
+  .my-navbar-expand {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .my-navbar-expand .navbar-nav {
+    flex-direction: row;
+  }
+  .my-navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .my-navbar-expand .navbar-nav .nav-link {
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+  }
+  .my-navbar-expand .navbar-nav-scroll {
+    overflow: visible;
+  }
+  .my-navbar-expand .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .my-navbar-expand .navbar-toggler {
+    display: none;
+  }
+  .my-navbar-expand .offcanvas {
+    position: static;
+    z-index: auto;
+    flex-grow: 1;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+    transition: none;
+  }
+  .my-navbar-expand .offcanvas .offcanvas-header {
+    display: none;
+  }
+  .my-navbar-expand .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+  }
+  .my-d-none {
+    display: none !important;
+  }
+  .my-d-block {
+    display: block !important;
+  }
+  h2 {
+    font-size: $fs-1 - 2;
+  }
+}

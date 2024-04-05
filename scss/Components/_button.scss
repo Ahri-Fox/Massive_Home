@@ -1,0 +1,23 @@
+.btn__black{
+    background-color: $color-black-2;
+    &:hover{
+        background-color: $color-yellow-0;
+        color: $color-white-0;
+    }
+    &:focus{
+        background-color: $color-yellow-0;
+        color: $color-white-0;
+    }
+}
+
+.btn__Yellow{
+    background-color: $color-yellow-0;
+    &:hover{
+        background-color: $color-white-0;
+        color: $color-black-2;
+    }
+    &:focus{
+        background-color: $color-white-0;
+        color: $color-black-2;
+    }
+}

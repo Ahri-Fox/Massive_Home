@@ -1,0 +1,36 @@
+.number{
+    background-color: $color-black-9;
+    .number__item{
+        text-align: center;
+        color: $color-white-0;
+        padding: 0;
+        i{
+            font-size: $fs-9;
+            margin-right: $m-3;
+        }
+        span{
+            font-size: $fs-9;
+            font-weight: $fw-2;
+            letter-spacing: $ls-1;
+        }
+        h3{
+            letter-spacing: $ls-0;
+            font-size: $fs-0;
+            font-weight: $fw-2;
+            color: $color-white-0;
+            margin-top: $m-3;
+        }
+    }
+    @include responsive("large"){
+        .number__item{
+            padding: $pd-4 0;
+        }
+    }
+    @include responsive("medium"){
+        .number__item{
+            span{
+                font-size: $fs-8 + 2;
+            }
+        }
+    }
+}

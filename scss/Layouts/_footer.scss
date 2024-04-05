@@ -1,0 +1,80 @@
+footer{
+    background: $color-black-2;
+    &.section{
+        padding: $pd-9 90px;
+    }
+    .footer__item{
+        .footer__logo{
+            display: block;
+            margin-bottom: $m-7;
+            img{
+                height: 100px;
+            }
+        }
+        .footer__text{
+            line-height: $line-height-3;
+            color: $color-gray-1;
+            margin-bottom: $m-9;
+        }
+        .footer__title{
+            letter-spacing: $ls-0;
+            @include textStyle($fs-0 - 1,$fw-2,$color-white-0);
+            margin-bottom: $m-9;
+        }
+        .footer__list{
+            margin: 0;
+            li{
+                list-style: none;
+                border-bottom: 1px solid $color-black-1;
+                a{
+                    text-decoration: none;
+                    font-weight: $fw-2;
+                    line-height: $line-height-5 - 1;
+                    color: $color-gray-3;
+                    transition: all .3s;
+                    &::before{
+                        font-family: "fontawesome";
+                        content: "\f105";
+                        font-size: $fs-1 - 1;
+                        padding-right:$pd-1 ;
+                    }
+                    &:hover{
+                        color: $color-yellow-0;
+                    }
+                }
+            }
+        }
+        .footer__lib{
+            font-size: 0;
+            li{
+                display: inline-block;
+                a{  
+                    display: inline-block;
+                    width: 55px;
+                    height: 55px;
+                    margin: 0 $m-3 $m-3 0;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("large"){
+        .footer__content{
+            .aaa{
+                padding-bottom: $pd-7;
+                .footer__item{
+                    .footer__lib{
+                        list-style-type:none;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium"){
+        &.section{
+            padding: $pd-9;
+        }
+    }
+}

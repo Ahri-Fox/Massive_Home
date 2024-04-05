@@ -1,0 +1,46 @@
+.feedback{
+    border-bottom: 1px solid $color-white-6;
+    .feedback__content{
+        padding: 0 $pd-4;
+        .item{
+            text-align: center;
+            .feedback__photo{
+                display: inline-block;
+                height: 100px;
+                width: 100px;
+                margin-bottom: $m-7;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            .feedback__comment{
+                font-size: $fs-0 + 1;
+                font-style: italic;
+                line-height: $line-height-3;
+                margin-bottom: $m-9;
+                p{
+                    margin: 0;
+                }
+            }
+            .feedback__user{
+                font-size: $fs-0 - 1;
+                color: $color-black-2;
+                letter-spacing: $ls-1;
+                margin-top: $m-3;
+                p{
+                    margin: 0;
+                }
+                p:last-child{
+                    font-size: $fs-1 - 1;
+                    color: $color-gray-10;
+                }
+            }
+        }
+    }
+    @include responsive("medium"){
+        .container{
+            max-width: 100%;
+        }
+    }
+}

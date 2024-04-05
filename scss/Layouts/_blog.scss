@@ -1,0 +1,106 @@
+.blog{
+    .blog__photo{
+        figure{
+            position: relative;
+            margin: 0;
+            img{
+                width: 100%;
+            }
+            figcaption{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: $color-black-6;
+                font-weight: $fw-2;
+                color: $color-white-0;
+                padding: $pd-0;
+            }
+        }
+    }
+    .blog__text{
+        padding: $pd-4 0;
+        .blog__tag, 
+        .blog__info {
+            padding: 0;
+            li {
+                display: inline;
+                a{
+                    text-decoration: none;
+                    font-size: $fs-1 - 1;
+                    color: $color-gray-7;
+
+                    &:hover{
+                        color: $color-yellow-0;
+                    }
+                }
+            }
+        }
+
+        .blog__tag{
+            margin-bottom: $m-3;
+            li:first-child{
+                margin-right: $m-3;
+            }
+            a{
+                letter-spacing: $ls-0;
+            }
+        }
+
+        .blog__title{
+                margin-bottom: $m-3;
+                font-size: $fs-3;
+                font-weight: $fw-2;
+                color: $color-black-1;
+                letter-spacing: $ls-2;
+                line-height: $line-height-0;
+                a{
+                    text-decoration: none;
+                    letter-spacing: $ls-0;
+                    color: $color-black-1;
+                }
+        }
+        .blog__info{
+            font-size: $fs-1 - 1;
+            margin-bottom: $m-8;
+            li:first-child{
+                &::after{
+                    content: '|';
+                    color: $color-gray-7;
+                    padding: 0 $pd-0 - 1 0 $pd-6;
+                }
+            }
+
+            a{
+                letter-spacing: $ls-1;
+            }
+        }
+        p{
+            color: $color-gray-1;
+            line-height: $line-height-3;
+            margin-bottom: $m-9;
+        }
+        .blog__read{
+            position: relative;
+            color: $color-gray-8;
+            letter-spacing: $ls-0;
+            text-decoration: none;
+            transition: all .3s;
+            &:hover{
+                color: $color-black-2;
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-weight: $fw-3;
+                margin-left: $m-3;
+            }
+        }
+    }
+    @include responsive("medium"){
+        .container{
+            max-width: 100%;
+        }
+    }
+}

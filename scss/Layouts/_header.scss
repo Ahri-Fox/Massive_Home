@@ -1,0 +1,145 @@
+header{
+    height: $fs-7;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    .massiveNavbar{ 
+        padding: 0 $pd-4;
+        justify-content: space-between;
+        background-color: $color-black-3;
+        transition: all .3s ease;
+        overflow: hidden;
+        &.resize-header{
+            height: 100px;
+            background-color: transparent;
+            .navbar-brand{
+                img{
+                    height: 96px;
+                }
+            }
+            &.sz-top--is-visible{
+                height: 60px;
+                background-color: $color-black-3;
+                align-items: end;
+                .navbar-brand{
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .navbar-brand{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            img{
+                display: inline-block;  
+                padding: $fs-5 0;
+                transition: all .3s;
+            }
+        }
+        .navbar-toggler {
+            padding: $pd-3 + 0.5px 0;
+            i {
+                font-size: $fs-2 + 3;
+                color: $color-white-0;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+
+        .navbar-collapse{
+            flex-grow: 0;
+            align-items: center;
+            .nav-divider{
+                font-size: $fs-1;
+                color: $color-white-0;
+                text-align: center;
+                padding: 0 $fs-1 - 1;
+            }
+            
+            .nav-item{
+                margin-left: $fs-5;
+                .nav-link{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include textStyle($fs-1,$fw-2,$color-white-0);
+                    padding: 0 $pd-0 + 2;
+                    letter-spacing: calc($ls-0 / 2);
+                    &.active,
+                    &:focus,
+                    &:hover{
+                        color: $color-yellow-0;
+                    }
+                    p{
+                        color: $color-white-0;
+                    }
+                    span{
+                        border: none;
+                        font-size: $fs-1;
+                        text-align: center;
+                        padding: 0;
+                        margin-left: $m-0 + 1;
+                    }
+                    i{
+                        font-size: $fs-1 - 1;
+                        margin-right: $m-1;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+
+    @media screen and (max-height: 414px) {
+        .massiveNavbar {
+            .navbar-brand {
+                img {
+                    height: 46px;
+                }
+            }
+            .navbar-collapse {
+                .nav-link {
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 769px) and (max-width: 788px) {
+        .massiveNavbar {
+            padding: 0 $pd-3;
+        }
+        .my-d-none {
+            display: none !important;
+          }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 991.98px) {
+        .massiveNavbar {
+            .navbar-collapse {
+                .nav-link {
+                    i {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1021.98px) {
+        .massiveNavbar {
+            &.resize-header {
+                .navbar-brand {
+                    img {
+                        height: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
